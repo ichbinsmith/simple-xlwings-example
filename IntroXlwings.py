@@ -5,9 +5,7 @@ import os
 def main():
     wb = xw.Book.caller()
 
-    #change working dir : set it to the script dir
-    #dir : os.path.dirname(os.path.realpath(__file__))
-    #file : os.chdir(os.path.dirname(os.path.abspath(__file__))) 
+    #path to working dir : os.path.dirname(os.path.realpath(__file__))
 
     df = pd.read_csv(os.path.dirname(os.path.realpath(__file__))+"\\data\\iris.csv")
     df['total_length'] =  df['sepal_length'] + df['petal_length']
